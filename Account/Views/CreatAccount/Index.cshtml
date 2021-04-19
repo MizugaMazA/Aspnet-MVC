@@ -1,0 +1,20 @@
+﻿@Model Account.ViewModels.AccountData
+
+<h2>會員系統</h2>
+
+<form action="/Account/Index" method="post">
+
+    @Html.DisplayNameFor(m => m.Account)
+    @Html.TextBoxFor(m => m.Account) 公分
+    @Html.ValidationMessageFor(modelItem => @Model.Account)<br />
+
+    @Html.DisplayNameFor(m => m.Weight)
+    @Html.TextBoxFor(m => m.Weight)  公斤
+    @Html.ValidationMessageFor(modelItem => @Model.Weight)<br />
+
+
+    <p><input type="submit" name="name" value="送出" /></p>
+</form>
+
+<p>計算結果:@Model.Result</p>
+<p>等級:@Model.Level</p>
